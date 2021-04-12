@@ -1,0 +1,173 @@
+<pandora-model>
+
+  <World>
+
+    <Person order="1">
+      <first_name pos="1" fsize="20" required="2" />
+      <last_name pos="+1" fsize="25" required="2" />
+      <birth_day pos="|+1" required="8" />
+      <birth_place pos="+0.10up" />
+      <father_name pos="|up+0.3" />
+      <mother_name pos="up+0.1" />
+      <gender pos="|left" view="bytelist" />
+      <exit_day pos="left,hide" />
+    </Person>
+
+    <Community order="2">
+      <name pos="1" fsize="84" />
+      <origin_place pos="|+1" fsize="34" />
+    </Community>
+
+    <Blob>
+      <name pos="|+1" />
+      <blob pos="|+1" view="blob" />
+      <type pos="|+1" />
+      <sha1 view="hex" pos="+1" />
+      <md5 view="hex" pos="+1" />
+    </Blob>
+
+    <Country>
+      <alfa2 pos="|" />
+    </Country>
+
+    <Relation>
+      <first view="panhash" pos="1" />
+      <second view="panhash" pos="3" />
+      <kind view="bytelist" pos="2" />
+    </Relation>
+
+    <Task>
+      <time view="datetime" />
+      <mode view="bytelist" />
+    </Task>
+
+  </World>
+
+  <Business>
+
+    <Product>
+      <stock pos="1" />
+      <name pos="2" />
+      <description pos="3" />
+    </Product>
+
+    <Debenture>
+      <creator pos="1" />
+      <recipient pos="2" />
+      <goods pos="3" />
+      <sum pos="4" />
+      <currency pos="5" />
+      <contract pos="6" />
+      <created pos="7" />
+    </Debenture>
+
+    <Deposit>
+      <creator pos="1" />
+      <condition pos="|2" />
+      <content pos="3" />
+      <currency pos="|4" />
+      <sum pos="5" />
+      <created pos="|100" />
+    </Deposit>
+
+    <Guarantee>
+      <creator pos="1" />
+      <obligor pos="|2" />
+      <condition pos="|3" />
+      <currency pos="|4" />
+      <sum pos="5" />
+      <created pos="|100" />
+    </Guarantee>
+
+    <Insurer>
+      <creator pos="1" />
+      <condition pos="2" />
+    </Insurer>
+
+  </Business>
+
+  <Region>
+
+    <Law>
+      <number pos="1" />
+    </Law>
+
+    <Resolution>
+      <number pos="0.5" />
+      <base pos="0.7" />
+    </Resolution>
+
+    <Project>
+      <cause pos="1" />
+    </Project>
+
+    <Punishment>
+      <offense pos="0.5" />
+      <law pos="0.7" />
+    </Punishment>
+
+    <Resource name.ru="Ресурс">
+      <coord pos="0.5" />
+    </Resource>
+
+    <Delegation>
+      <expire view="datetime" />
+    </Delegation>
+
+    <Registry>
+      <creator pos="1" />
+      <recipient pos="|2" />
+      <resolution pos="|3" />
+      <number pos="|4" />
+      <attributes pos="5"/>
+      <created pos="6" />
+    </Registry>
+
+  </Region>
+
+  <Pandora name="Pandora Node">
+
+    <Panobject>
+      <panhash pos="|253,hide" view="phash" />
+      <modified pos="|254" view="time" />
+      <panstate pos="255,hide" view="word" />
+    </Panobject>
+
+    <Created>
+      <creator pos="|250" view="phash" />
+      <created pos="251" view="time" />
+    </Created>
+
+    <Parameter order="101" sort="section, name">
+      <name pos="1" fsize="32" />
+      <type pos="+1" />
+      <section pos="+1" />
+      <desc pos="|+1" fsize="64" />
+      <value pos="|+1" fsize="64" view="string" />
+      <setting pos="|+1" fsize="64" view="string" />
+    </Parameter>
+
+    <Key>
+      <kind view="hex" />
+      <expire view="time" />
+      <cipher view="hex" />
+      <body view="base64" />
+    </Key>
+
+    <Sign>
+      <obj_hash view="panhash" />
+      <key_hash view="panhash" />
+      <trust view="byte" />
+      <sign view="base64" />
+    </Sign>
+
+    <Node>
+      <domain fsize="64" />
+      <password fsize="32" />
+      <name fsize="64" />
+      <base_id view="hex" />
+    </Node>
+
+  </Pandora>
+
+</pandora-model>
